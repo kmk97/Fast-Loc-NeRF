@@ -18,11 +18,11 @@ These enhancements enable **faster localization while achieving state-of-the-art
 
 <p align="left">
   
-  <img src="./asset/figure2.png" width="60%">
+  <img src="./asset/test2.png" width="60%">
 </p>
 <p align="left">
   
-  <img src="./asset/test2.png" width="100%">
+  <img src="./asset/figure2.png" width="100%">
 </p>
 
 *Figure: Overview of Fast-Loc-NeRF.*
