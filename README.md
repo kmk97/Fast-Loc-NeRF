@@ -16,9 +16,13 @@ These enhancements enable **faster localization while achieving state-of-the-art
 
 ## 🏞️ Overview Diagram  
 
-<p align="center">
-  <img src="./test2.png" width="45%">
-  <img src="./figure2.png" width="45%">
+<p align="left">
+  
+  <img src="./asset/figure2.png" width="60%">
+</p>
+<p align="left">
+  
+  <img src="./asset/test2.png" width="100%">
 </p>
 
 *Figure: Overview of Fast-Loc-NeRF.*
