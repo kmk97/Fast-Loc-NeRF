@@ -1,5 +1,5 @@
-# 📌 Fast-Loc-NeRF: Fast and Accurate Global Localization in NeRF Maps  
-📢 *Accepted to ICRA 2025*  
+# Fast-Loc-NeRF: Fast and Accurate Global Localization in NeRF Maps  
+ *Accepted to ICRA 2025*  
 
 ---
 
@@ -16,7 +16,11 @@ These enhancements enable **faster localization while achieving state-of-the-art
 
 ## 🏞️ Overview Diagram  
 
-![Overview](path_to_your_overview_image)  
+<p align="center">
+  <img src="./test2.png" width="45%">
+  <img src="./figure2.png" width="45%">
+</p>
+
 *Figure: Overview of Fast-Loc-NeRF.*
 
 ---
