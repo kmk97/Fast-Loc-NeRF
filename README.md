@@ -1,5 +1,6 @@
 # Fast Global Localization on Neural Radiance Field
 ##  *Accepted to ICRA 2025*  
+### Code will be released soon
 
 
 ---
@@ -19,11 +20,6 @@ Fast-Loc-NeRF is a novel approach for **fast and accurate global localization** 
   
   <img src="./asset/test2.png" width="60%">
 </p>
-<p align="left">
-  
-  <img src="./asset/figure2.png" width="100%">
-</p>
-
 *Figure: Overview of Fast-Loc-NeRF.*
 
 ---
@@ -40,7 +36,7 @@ Fast-Loc-NeRF outperforms existing methods in both **accuracy and efficiency**.
 ## 📽️ Video Demonstration  
 
 [![Watch the video](https://img.youtube.com/vi/hkKbtk9wHGk/maxresdefault.jpg)](https://youtu.be/hkKbtk9wHGk)  
-
+*(Click the image to watch the video on YouTube)*
 ---
 
 <!-- ## 📦 Installation  
