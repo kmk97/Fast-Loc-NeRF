@@ -1,4 +1,7 @@
 # Fast Global Localization on Neural Radiance Field
+
+[![arXiv](https://img.shields.io/badge/arXiv-2411.10722-B31B1B.svg)](https://arxiv.org/abs/2411.10722)
+
 ##  *Accepted to ICRA 2025*  
 ### Code will be released soon
 
