@@ -80,7 +80,6 @@ After updating your yaml file `fast.yaml` with the directory where you placed th
 ## System Requirements
 
 * **ROS Environment**: Install ROS following the [official ROS installation guide](http://wiki.ros.org/ROS/Installation).
-* **GPU Support**: CUDA-compatible GPU recommended for optimal NeRF rendering performance in global localization experiments.
 * **Docker Support**: The system is designed to run in containerized environments using Docker for consistent deployment.
 
 ## Setup Fast-Loc-NeRF
