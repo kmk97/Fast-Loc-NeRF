@@ -166,9 +166,9 @@ To begin your evaluation, prepare the LLFF dataset with pre-trained NeRF models 
 If you find this code relevant for your work, please consider citing our paper:
 
 ```bibtex
-@article{kim2024fast,
-  title={Fast Global Localization on Neural Radiance Field},
-  author={Kim, Mangyu and Bang, Jaeho and Lim, Hwangpil and others},
+@article{kong2024fast,
+  title={Fast global localization on neural radiance field},
+  author={Kong, Mangyu and Lee, Seongwon and Lee, Jaewon and Kim, Euntai},
   journal={arXiv preprint arXiv:2406.12202},
   year={2024}
 }
