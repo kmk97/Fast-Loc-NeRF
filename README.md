@@ -48,3 +48,4 @@ Clone the repository and install dependencies:
 git clone https://github.com/kmk97/Fast-Loc-NeRF.git
 cd Fast-Loc-NeRF
 pip install -r requirements.txt -->
+
