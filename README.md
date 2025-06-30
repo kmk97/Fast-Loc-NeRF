@@ -81,8 +81,24 @@ After updating your yaml file `fast.yaml` with the directory where you placed th
 
 * **ROS Environment**: Install ROS following the [official ROS installation guide](http://wiki.ros.org/ROS/Installation).
 * **GPU Support**: CUDA-compatible GPU recommended for optimal NeRF rendering performance in global localization experiments.
+* **Docker Support**: The system is designed to run in containerized environments using Docker for consistent deployment.
 
 ## Setup Fast-Loc-NeRF
+
+### Option 1: Docker Setup (Recommended)
+
+Fast-Loc-NeRF can be easily deployed using Docker containers, which provides a consistent environment across different systems:
+
+```bash
+# Clone the repository
+git clone https://github.com/kmk97/Fast-Loc-NeRF.git
+cd Fast-Loc-NeRF
+
+# Build and run Docker container (detailed Docker setup will be provided)
+# Docker configuration handles all dependencies and ROS environment setup automatically
+```
+
+### Option 2: Local Installation
 
 ```bash
 # Create workspace for Fast-Loc-NeRF
@@ -110,14 +126,26 @@ pip install opencv-python numpy scipy matplotlib pyyaml tqdm imageio configargpa
 
 # 2. Running Fast-Loc-NeRF
 
-**Launch Fast-Loc-NeRF** - In a new terminal, start the global localization system:
+## Docker Execution (Recommended)
+
+For Docker users, Fast-Loc-NeRF can be launched directly within the containerized environment:
+```bash
+# Run Fast-Loc-NeRF in Docker container
+# (Detailed Docker run commands will be provided)
+```
+
+## Local Execution
+
+For local installation, launch Fast-Loc-NeRF using ROS:
 ```bash
 roslaunch locnerf navigate.launch parameter_file:=<config_file.yaml>
 ```
 
+**Note**: Both Docker and local execution support RViz visualization for monitoring global localization progress and particle distributions.
+
 # 3. Configuration Files
 
-Fast-Loc-NeRF provides two configuration profiles in the `/cfg` directory for different experimental scenarios:
+Fast-Loc-NeRF provides two configuration profiles in the `/cfg` directory for different experimental scenarios. These configurations work seamlessly in both Docker and local environments:
 
 - **`fast.yaml`**: Our enhanced configuration featuring particle rejection weighting and coarse-to-fine matching algorithms. This profile showcases Fast-Loc-NeRF's accelerated convergence and improved accuracy in challenging global localization tasks.
 
