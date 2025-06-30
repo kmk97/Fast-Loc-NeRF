@@ -153,13 +153,6 @@ Fast-Loc-NeRF provides two configuration profiles in the `/cfg` directory for di
 
 ---
 
-# 4. Experimental Evaluation
-
-Fast-Loc-NeRF includes comprehensive evaluation framework for benchmarking against existing methods like iNeRF and Loc-NeRF using LLFF datasets. The system leverages pre-trained [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch) models as neural scene representations.
-
-To begin your evaluation, prepare the LLFF dataset with pre-trained NeRF models as detailed in the "Using LLFF Data for Global Localization" section above, then launch Fast-Loc-NeRF with your desired configuration profile.
-
----
 
 ## Publications
 
