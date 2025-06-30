@@ -44,7 +44,7 @@ Fast-Loc-NeRF outperforms existing methods in both **accuracy and efficiency**.
 
 ## Using LLFF Data for Global Localization
 
-Download LLFF images and pretrained NeRF-Pytorch weights from [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch). If you download our fork of [iNeRF](https://github.com/salykovaa/inerf), the configs and ckpts folder will already be setup correctly with the pre-trained weights, and you just need to add the data folder from NeRF-Pytorch.
+Download LLFF images and pretrained NeRF-Pytorch weights from [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch). 
 
 Place data using the following structure:
 
