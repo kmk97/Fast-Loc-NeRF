@@ -77,79 +77,59 @@ After updating your yaml file `fast.yaml` with the directory where you placed th
 
 # 1. Installation
 
-## A. Prerequisites
+## System Requirements
 
-* Install ROS by following [ROS website](http://wiki.ros.org/ROS/Installation).
-* If you want to use VIO for the predict step for a real robot demo, install a VIO such as [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) or [Kimera](https://github.com/MIT-SPARK/Kimera).
+* **ROS Environment**: Install ROS following the [official ROS installation guide](http://wiki.ros.org/ROS/Installation).
+* **GPU Support**: CUDA-compatible GPU recommended for optimal NeRF rendering performance in global localization experiments.
 
-## B. Fast-Loc-NeRF Installation
+## Setup Fast-Loc-NeRF
 
 ```bash
-# Setup catkin workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/
+# Create workspace for Fast-Loc-NeRF
+mkdir -p ~/fast_locnerf_ws/src
+cd ~/fast_locnerf_ws/
 catkin init
 
-# Clone repo
-cd ~/catkin_ws/src
+# Clone Fast-Loc-NeRF repository
+cd ~/fast_locnerf_ws/src
 git clone https://github.com/kmk97/Fast-Loc-NeRF.git
 
-# Compile code
+# Build the workspace
 catkin build
 
-# Source workspace
-source ~/catkin_ws/devel/setup.bash
+# Activate the workspace
+source ~/fast_locnerf_ws/devel/setup.bash
 
-# Install Python dependencies (if requirements.txt exists)
-cd ~/catkin_ws/src/Fast-Loc-NeRF
+# Install required Python packages for Fast-Loc-NeRF
+cd ~/fast_locnerf_ws/src/Fast-Loc-NeRF
 pip install torch torchvision torchaudio
 pip install opencv-python numpy scipy matplotlib pyyaml tqdm imageio configargparse
 ```
 
 ---
 
-# 2. Starting Fast-Loc-NeRF
+# 2. Running Fast-Loc-NeRF
 
-We will use ROS and rviz as a structure for running Fast-Loc-NeRF and for visualizing performance. As a general good practice, remember to source your workspace for each terminal you use.
-
-1. Open a new terminal and run: `roscore`
-
-2. In another terminal, launch Fast-Loc-NeRF:
+**Launch Fast-Loc-NeRF** - In a new terminal, start the global localization system:
 ```bash
-roslaunch locnerf navigate.launch parameter_file:=<param_file.yaml>
+roslaunch locnerf navigate.launch parameter_file:=<config_file.yaml>
 ```
 
-3. In another terminal, launch rviz for visualization:
-```bash
-rviz -d $(rospack find locnerf)/rviz/rviz.rviz
-```
+# 3. Configuration Files
 
-4. If you are not running with a rosbag, i.e. you are using LLFF data, then Fast-Loc-NeRF should start and you should be set. If you are using a rosbag, continue to the next steps.
+Fast-Loc-NeRF provides two configuration profiles in the `/cfg` directory for different experimental scenarios:
 
-5. In another terminal launch VIO
+- **`fast.yaml`**: Our enhanced configuration featuring particle rejection weighting and coarse-to-fine matching algorithms. This profile showcases Fast-Loc-NeRF's accelerated convergence and improved accuracy in challenging global localization tasks.
 
-6. Finally, in another terminal, play your rosbag:
-```bash
-rosbag play /PATH/TO/ROSBAG
-```
+
 
 ---
 
-# 3. Provided Config Files
+# 4. Experimental Evaluation
 
-We provide two yaml files in `/cfg` for global localization experiments:
+Fast-Loc-NeRF includes comprehensive evaluation framework for benchmarking against existing methods like iNeRF and Loc-NeRF using LLFF datasets. The system leverages pre-trained [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch) models as neural scene representations.
 
-- **`fast.yaml`**: Setup to run Fast-Loc-NeRF with our novel particle rejection weighting and coarse-to-fine matching techniques. This configuration demonstrates the improvements over standard Loc-NeRF with faster convergence and better accuracy in global localization scenarios.
-
-- **`llff_global.yaml`**: Runs standard global localization on the LLFF dataset with a wider spread of particles to test the ability to perform global localization without our enhancements, for comparison purposes.
-
----
-
-# 4. Usage
-
-We provide example code to run Fast-Loc-NeRF on LLFF data to compare with iNeRF and Loc-NeRF for global localization experiments. We use [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch) as our NeRF map.
-
-The fastest way to start running Fast-Loc-NeRF is to download LLFF data with pre-trained NeRF weights. The data structure and configuration details are explained in the "Using LLFF Data for Global Localization" section above.
+To begin your evaluation, prepare the LLFF dataset with pre-trained NeRF models as detailed in the "Using LLFF Data for Global Localization" section above, then launch Fast-Loc-NeRF with your desired configuration profile.
 
 ---
 
