@@ -176,20 +176,9 @@ If you find this code relevant for your work, please consider citing our paper:
 
 ---
 
-# Third-party Code
+# Acknowledgments
 
-This code were based on [Loc-NeRF](https://github.com/MIT-SPARK/Loc-NeRF), and [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch).
-
-```bibtex
-@misc{lin2020nerfpytorch,
- title={NeRF-pytorch},
- author={Yen-Chen, Lin},
- publisher = {GitHub},
- journal = {GitHub repository},
- howpublished={\url{https://github.com/yenchenlin/nerf-pytorch/}},
- year={2020}
-}
-```
+This work is built upon [Loc-NeRF](https://github.com/MIT-SPARK/Loc-NeRF) and [NeRF-Pytorch](https://github.com/yenchenlin/nerf-pytorch).
 
 ---
 
